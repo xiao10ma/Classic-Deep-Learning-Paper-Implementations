@@ -9,8 +9,7 @@ from diffusion_model import DenoiseDiffusion
 from unet import UNet
 
 # 设置设备
-# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-device = torch.device("cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # 超参数
 batch_size = 128
