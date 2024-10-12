@@ -30,6 +30,8 @@ class Batch:
             mean_x2 = (x ** 2).mean(dim=[0, 2])
             var = mean_x2 - mean ** 2
             if self.training and self.track_running_stats:
+                # Momentum动量，"指数移动平均"（Exponential Moving Average，EMA）
+                # 平滑，减少噪声
                 self.exp_mean = (1 - self.momentum) * self.exp_mean + self.momentum * mean
                 self.exp_var = (1 - self.momentum) * self.var + self.momentum * var
         else:
