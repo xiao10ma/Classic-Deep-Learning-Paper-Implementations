@@ -1,4 +1,4 @@
-save_interval: 1
+save_interval: 20
 
 train:
   image_size: 64
